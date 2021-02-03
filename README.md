@@ -30,11 +30,13 @@ To get started follow these steps below. In this example, we are going to create
 7. Create Container Registry in Azure. From this registry, obtain the user name and password go to the Settings > Access Keys
 ![7-container-registry](https://user-images.githubusercontent.com/30946443/106708305-7d3c9c00-65a7-11eb-9410-9354d8c5bebd.jpg)
 
+
 8. $ docker login simple_azure_docker_node.azurecr.io
 ![7-1-container-registry](https://user-images.githubusercontent.com/30946443/106708248-6302be00-65a7-11eb-8b6b-767f4e3e3ba0.jpg)
 
-9. Push the docker image to azure docker registry. This will make a copy of the local environment into the azure cloud.
-```$ docker push simple_azure_docker_node.azurecr.io/node-web-app```
+
+9. Push the docker image to azure docker registry. This will make a copy of the local environment into the azure cloud.<br>
+```$ docker push simple_azure_docker_node.azurecr.io/node-web-app```<br>
 When completed, go to the Azure portal under the container registry and into repositories. This is where we are going to put our instance.
 
 __Create an Azure Container Instance using these settings:__<br>
