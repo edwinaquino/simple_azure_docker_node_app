@@ -20,16 +20,18 @@ To get started follow these steps below. In this example, we are going to create
 ```$ cd imple_azure_docker_node_app```<br>
 3. Send command: Build the nodejs application, this will create the node_modules folder.<br>
 ```$ npm install```
-5. Build the docker container in your local machine.<br>
+4. Build the docker container in your local machine.<br>
 ```$ docker build -t imple_azure_docker_node.azurecr.io/node-web-app .```
-6. Run the app in your local machine container.<br>
+5. Run the app in your local machine container.<br>
 ```$ docker run -p 49160:8080 -d imple_azure_docker_node.azurecr.io/node-web-app```
 
-7. open: http://localhost:49160/
+6. open: http://localhost:49160/
 
-8. Create Container Registry in Azure. From this registry, obtain the user name and password go to the Settings > Access Keys
-$ docker login imple_azure_docker_node.azurecr.io
+7. Create Container Registry in Azure. From this registry, obtain the user name and password go to the Settings > Access Keys
+![7-container-registry](https://user-images.githubusercontent.com/30946443/106708305-7d3c9c00-65a7-11eb-9410-9354d8c5bebd.jpg)
 
+8. $ docker login imple_azure_docker_node.azurecr.io
+![7-1-container-registry](https://user-images.githubusercontent.com/30946443/106708248-6302be00-65a7-11eb-8b6b-767f4e3e3ba0.jpg)
 
 9. Push the docker image to azure docker registry. This will make a copy of the local environment into the azure cloud.
 ```$ docker push imple_azure_docker_node.azurecr.io/node-web-app```
