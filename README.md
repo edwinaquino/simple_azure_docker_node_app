@@ -21,9 +21,9 @@ To get started follow these steps below. In this example, we are going to create
 3. Send command: Build the nodejs application, this will create the node_modules folder.<br>
 ```$ npm install```
 4. Build the docker container in your local machine.<br>
-```$ docker build -t simple_azure_docker_node.azurecr.io/node-web-app .```
+```$ docker build -t simple_azure_docker_node.azurecr.io/simple_azure_docker_node .```
 5. Run the app in your local machine container.<br>
-```$ docker run -p 49160:8080 -d simple_azure_docker_node.azurecr.io/node-web-app```
+```$ docker run -p 49160:8080 -d simple_azure_docker_node.azurecr.io/simple_azure_docker_node```
 
 6. open: http://localhost:49160/
 
@@ -36,7 +36,7 @@ To get started follow these steps below. In this example, we are going to create
 
 
 9. Push the docker image to azure docker registry. This will make a copy of the local environment into the azure cloud.<br>
-```$ docker push simple_azure_docker_node.azurecr.io/node-web-app```<br>
+```$ docker push simple_azure_docker_node.azurecr.io/simple_azure_docker_node```<br>
 When completed, go to the Azure portal under the container registry and into repositories. This is where we are going to put our instance.
 
 __Create an Azure Container Instance using these settings:__<br>
@@ -51,7 +51,7 @@ __Docker Tab:__
 * options: single 
 * Image Source: Azure Container Registry: 
 * Registry: simple_azure_docker_node 
-* image: node-web-app
+* image: simple_azure_docker_node
 * tag: latest
 
 Hit the create button
